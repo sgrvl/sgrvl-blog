@@ -6,12 +6,16 @@ import matter from "gray-matter";
 import marked from "marked";
 
 const Post = ({ contents, data }) => {
+	console.log(contents);
 	return (
 		<>
 			<Head>
 				<title>{data.title}</title>
 			</Head>
-			<div dangerouslySetInnerHTML={{ __html: contents }} />
+			<div
+				dangerouslySetInnerHTML={{ __html: contents }}
+				style={{ maxWidth: "500px", margin: "0 auto" }}
+			/>
 		</>
 	);
 };

@@ -7,6 +7,7 @@ media_library: # For cloudinary image hosting
   config:
     cloud_name: sgrvl
     api_key: 474894817422344
+    output_filename_only: true
 collections: # This setting is required.
   - name: "blog" # Unique identifier for the collection, used as the key when referenced in other contexts
     label: "Blog Posts" # Label for the collection in the editor UI; defaults to the value of name
