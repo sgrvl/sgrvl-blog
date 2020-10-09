@@ -4,7 +4,6 @@ backend: # This setting is required.
 media_folder: public/img # The media_folder option specifies the folder path where uploaded files should be saved, relative to the base of the repo. This setting is required.
 media_library: # For cloudinary image hosting
   name: cloudinary
-  output_filename_only: true
   config:
     cloud_name: sgrvl
     api_key: 474894817422344
@@ -26,3 +25,6 @@ collections: # This setting is required.
           default: "Simon Gravel",
         }
       - { label: "Body", name: "body", widget: "markdown" }
+      media_library:
+        name: cloudinary
+        output_filename_only: true
