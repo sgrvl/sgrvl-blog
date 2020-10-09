@@ -1,15 +1,18 @@
 {
-  "name": "sgrvl-blog",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "9.5.4",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
-  }
+	"name": "sgrvl-blog",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"export": "npm run build && next export"
+	},
+	"dependencies": {
+		"gray-matter": "^4.0.2",
+		"marked": "^1.2.0",
+		"next": "9.5.4",
+		"react": "16.13.1",
+		"react-dom": "16.13.1"
+	}
 }
