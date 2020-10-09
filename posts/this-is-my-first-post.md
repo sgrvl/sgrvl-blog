@@ -11,6 +11,6 @@ Also, I need to add the title as an h1 at the top of the post.
 
 I need to take the publish date hour out, cuz i dont careeee
 
-![yes](/img/img_0292.webp?nf_resize=fit&w=300 "test")
+![yes](/img/img_0292.webp "test")
 
 This image should get resized responsively
