@@ -5,8 +5,8 @@ media_folder: public/img # The media_folder option specifies the folder path whe
 media_library: # For cloudinary image hosting
   name: cloudinary
   config:
-  cloud_name: sgrvl
-  api_key: 474894817422344
+    cloud_name: sgrvl
+    api_key: 474894817422344
 collections: # This setting is required.
   - name: "blog" # Unique identifier for the collection, used as the key when referenced in other contexts
     label: "Blog Posts" # Label for the collection in the editor UI; defaults to the value of name
@@ -22,5 +22,5 @@ collections: # This setting is required.
           name: "author",
           widget: "string",
           default: "Simon Gravel",
-        } # Need to change this !!!!
+        }
       - { label: "Body", name: "body", widget: "markdown" }
