@@ -9,7 +9,7 @@ This is the second test post, so far only the images didn't work.
 
 This is an image: 
 
-![test test]( "This image is way too big")
+![test test](https://res.cloudinary.com/sgrvl/image/upload/v1600454375/IMG_0583_ztf4kl.jpg "This image is way too big")
 
 It's fucking huge
 
