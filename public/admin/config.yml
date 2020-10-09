@@ -9,7 +9,7 @@ collections: # This setting is required.
     label_singular: "Blog Post" #Singular label for certain elements in the editor; defaults to the value of label
     folder: "posts" # Represent one or more files with the same format, fields, and configuration options, all stored within the same folder in the repository.
     create: true # Allows users to create new items in the collection; defaults to false
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{slug}}" # Filename template
     fields: # The fields for front matter. You will need to modify fields according to your project.
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
@@ -19,5 +19,11 @@ collections: # This setting is required.
           widget: "string",
           default: "Simon Gravel",
         }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          format: "LL",
+          picker_utc: true,
+        }
       - { label: "Body", name: "body", widget: "markdown" }
