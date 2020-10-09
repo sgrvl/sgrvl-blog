@@ -6,7 +6,6 @@ import matter from "gray-matter";
 import marked from "marked";
 
 const Post = ({ contents, data }) => {
-	console.log(contents);
 	return (
 		<>
 			<Head>

@@ -2,13 +2,14 @@ backend: # This setting is required.
   name: git-gateway
   branch: master
 media_folder: public/img # The media_folder option specifies the folder path where uploaded files should be saved, relative to the base of the repo. This setting is required.
+public_folder: /img # This is needed for Next to properly access the public folder
 collections: # This setting is required.
   - name: "blog" # Unique identifier for the collection, used as the key when referenced in other contexts
     label: "Blog Posts" # Label for the collection in the editor UI; defaults to the value of name
     label_singular: "Blog Post" #Singular label for certain elements in the editor; defaults to the value of label
     folder: "posts" # Represent one or more files with the same format, fields, and configuration options, all stored within the same folder in the repository.
     create: true # Allows users to create new items in the collection; defaults to false
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for front matter. You will need to modify fields according to your project.
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
