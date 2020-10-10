@@ -14,7 +14,7 @@
 				// Internal id of the component
 				id: "image",
 				// Visible label
-				label: "TestImage",
+				label: "cloudinary",
 				// Fields the user need to fill out when adding an instance of the component
 				fields: [
 					{
@@ -22,7 +22,9 @@
 						label: "Image",
 						widget: "image",
 						media_library: {
+							name: "cloudinary",
 							allow_multiple: false,
+							output_filename_only: true,
 						},
 					},
 					{
@@ -43,16 +45,14 @@
 				},
 				// make this in a way that i can find and replace later on because this gets stringify then parsed to html or something
 				toBlock: function (obj) {
-					console.log(obj);
-					return `<div><img src=${obj.image + "?nf_resize=fit&w=500"} alt=${
+					const width = 500;
+					return `<div><img src=${`https://res.cloudinary.com/sgrvl/w_${width}/${obj.image}`} alt=${
 						obj.alt
 					} /></div>`;
 					//return `![${obj.alt || ""}](${obj.image || ""})`;
 				},
-
-				//make this normal markdown ok review not gonna work
 				toPreview: function (obj) {
-					return `<div><img src=${obj.image + "?nf_resize=fit&w=500"} alt=${
+					return `<div><img src=${`https://res.cloudinary.com/sgrvl/w_${width}/${obj.image}`} alt=${
 						obj.alt
 					} /></div>`;
 				},
