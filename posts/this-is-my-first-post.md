@@ -6,14 +6,10 @@ date: 2020-10-09T04:00:00.000Z
 ---
 This is a temporary post, I'm just testing stuff out.
 
-![](/img/img_0179.webp)
-
 Also, I need to add the title as an h1 at the top of the post.
 
-I need to take the publish date hour out, cuz i dont careeee
+fuck will this work
 
-![yes](/img/img_0292.webp "test")
-
-
+![alt text](/img/img_0179.webp)
 
 This image should get resized responsively
