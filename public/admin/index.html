@@ -44,7 +44,7 @@
 				// make this in a way that i can find and replace later on because this gets stringify then parsed to html or something
 				toBlock: function (obj) {
 					console.log(obj);
-					return `<div><img src=${obj.image + "?nf_resize=fitp&w=400"} alt=${
+					return `<div><img src=${obj.image + "?nf_resize=fit&w=500"} alt=${
 						obj.alt
 					} /></div>`;
 					//return `![${obj.alt || ""}](${obj.image || ""})`;
@@ -52,7 +52,7 @@
 
 				//make this normal markdown ok review not gonna work
 				toPreview: function (obj) {
-					return `<div><img src=${obj.image + "?nf_resize=fitp&w=400"} alt=${
+					return `<div><img src=${obj.image + "?nf_resize=fit&w=500"} alt=${
 						obj.alt
 					} /></div>`;
 				},
