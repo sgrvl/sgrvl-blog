@@ -42,7 +42,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
 		props: {
 			slug,
 			contents: htmlString,
-			data: { ...parsedMD.data, date: parsedMD.data.date.toJSON() },
+			data: parsedMD.data,
 		},
 	};
 };

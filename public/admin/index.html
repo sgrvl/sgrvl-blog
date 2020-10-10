@@ -41,15 +41,15 @@
 						/* title: match[4], */
 					};
 				},
-				// Function to create a text block from an instance of this component
+				// make this in a way that i can find and replace later on because this gets stringify then parsed to html or something
 				toBlock: function (obj) {
 					return `<img src=${obj.src + "?nf_resize=fitp&w=400"} alt=${
 						obj.alt
 					} />`;
 					//return `![${obj.alt || ""}](${obj.image || ""})`;
 				},
-				// Preview output for this component. Can either be a string or a React component
-				// (component gives better render performance)
+
+				//make this normal markdown
 				toPreview: function (obj) {
 					return `<img src=${obj.src + "?nf_resize=fitp&w=400"} alt=${
 						obj.alt
