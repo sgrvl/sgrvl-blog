@@ -43,17 +43,18 @@
 				},
 				// make this in a way that i can find and replace later on because this gets stringify then parsed to html or something
 				toBlock: function (obj) {
-					return `<div><img src=${obj.src + "?nf_resize=fitp&w=400"} alt=${
+					console.log(obj);
+					return `<div><img src=${obj.image + "?nf_resize=fitp&w=400"} alt=${
 						obj.alt
 					} /></div>`;
 					//return `![${obj.alt || ""}](${obj.image || ""})`;
 				},
 
-				//make this normal markdown
+				//make this normal markdown ok review not gonna work
 				toPreview: function (obj) {
-					return `<div><img src=${
-						"public/" + obj.src + "?nf_resize=fitp&w=400"
-					} alt=${obj.alt} /></div>`;
+					return `<div><img src=${obj.image + "?nf_resize=fitp&w=400"} alt=${
+						obj.alt
+					} /></div>`;
 				},
 			});
 		</script>

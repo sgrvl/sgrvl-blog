@@ -1,5 +1,5 @@
 backend: # This setting is required.
-  name: git-gateway # test-repo
+  name: test-repo # git-gateway
   branch: master
 media_folder: public/img # The media_folder option specifies the folder path where uploaded files should be saved, relative to the base of the repo. This setting is required.
 public_folder: /img # This is needed for Next to properly access the public folder
