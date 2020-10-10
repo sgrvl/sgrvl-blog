@@ -51,9 +51,9 @@
 
 				//make this normal markdown
 				toPreview: function (obj) {
-					return `<img src=${obj.src + "?nf_resize=fitp&w=400"} alt=${
+					return `<div><img src=${obj.src + "?nf_resize=fitp&w=400"} alt=${
 						obj.alt
-					} />`;
+					} /></div>`;
 				},
 			});
 		</script>

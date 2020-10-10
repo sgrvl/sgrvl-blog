@@ -3,10 +3,14 @@ import Head from "next/head";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import marked from "marked";
+import { Remarkable } from "remarkable";
 
-const Post = ({ contents, data }) => {
-	console.log(contents, data);
+const md = new Remarkable("full", {
+	html: true,
+	typographer: true,
+});
+
+const Post = ({ data, contents }) => {
 	return (
 		<>
 			<Head>
@@ -36,13 +40,13 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params: { slug } }) => {
 	const markdown = fs.readFileSync(path.join("posts", slug + ".md")).toString();
 	const parsedMD = matter(markdown);
-	const htmlString = marked(parsedMD.content);
+	const htmlString = md.render(parsedMD.content);
 
 	return {
 		props: {
 			slug,
-			contents: htmlString,
 			data: parsedMD.data,
+			contents: htmlString,
 		},
 	};
 };
