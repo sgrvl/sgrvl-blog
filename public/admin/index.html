@@ -11,11 +11,8 @@
 		<script src="https://unpkg.com/netlify-cms@2.9.7/dist/netlify-cms.js"></script>
 		<script>
 			CMS.registerEditorComponent({
-				// Internal id of the component
 				id: "image",
-				// Visible label
 				label: "cloudinary",
-				// Fields the user need to fill out when adding an instance of the component
 				fields: [
 					{
 						name: "image",
@@ -33,26 +30,28 @@
 						widget: "string",
 					},
 				],
-				// Pattern to identify a block as being an instance of this component
 				pattern: /^!\[(.*)\]\((.*?)(\s"(.*)")?\)$/,
-				// Function to extract data elements from the regexp match
 				fromBlock: function (match) {
 					return {
 						image: match[2],
 						alt: match[1],
-						/* title: match[4], */
 					};
 				},
-				// make this in a way that i can find and replace later on because this gets stringify then parsed to html or something
 				toBlock: function (obj) {
-					const width = 500;
-					return `<div><img src=${`https://res.cloudinary.com/sgrvl/w_${width}/${obj.image}`} alt=${
+					const url = (width) =>
+						`https://res.cloudinary.com/sgrvl/w_${width}/${obj.image}`;
+					return `<div><img src=${url(500)} srcset=${`${url(450)} 450w, ${url(
+						400
+					)} 400w, ${url(350)} 350w, ${url(300)} 300w,`} alt=${
 						obj.alt
 					} /></div>`;
-					//return `![${obj.alt || ""}](${obj.image || ""})`;
 				},
 				toPreview: function (obj) {
-					return `<div><img src=${`https://res.cloudinary.com/sgrvl/w_${width}/${obj.image}`} alt=${
+					const url = (width) =>
+						`https://res.cloudinary.com/sgrvl/w_${width}/${obj.image}`;
+					return `<div><img src=${url(500)} srcset=${`${url(450)} 450w, ${url(
+						400
+					)} 400w, ${url(350)} 350w, ${url(300)} 300w,`} alt=${
 						obj.alt
 					} /></div>`;
 				},

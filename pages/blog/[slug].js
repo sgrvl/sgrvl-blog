@@ -4,11 +4,18 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { Remarkable } from "remarkable";
+import styled from "styled-components";
 
 const md = new Remarkable("full", {
 	html: true,
 	typographer: true,
 });
+
+const Article = styled.div`
+	max-width: 500px;
+	margin: 0 auto;
+	text-align: center;
+`;
 
 const Post = ({ data, contents }) => {
 	return (
@@ -16,10 +23,10 @@ const Post = ({ data, contents }) => {
 			<Head>
 				<title>{data.title}</title>
 			</Head>
-			<div
-				dangerouslySetInnerHTML={{ __html: contents }}
-				style={{ maxWidth: "500px", margin: "0 auto" }}
-			/>
+			<Article>
+				<h1>{data.title}</h1>
+				<div dangerouslySetInnerHTML={{ __html: contents }} />
+			</Article>
 		</>
 	);
 };
