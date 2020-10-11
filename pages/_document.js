@@ -1,17 +1,23 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-// Import styled components ServerStyleSheet
-import { ServerStyleSheet } from "styled-components";
+import { ServerStyleSheet, StyleSheetManager } from "styled-components";
+import stylisRTLPlugin from "stylis-plugin-rtl";
 
 export default class MyDocument extends Document {
 	static getInitialProps({ renderPage }) {
 		const sheet = new ServerStyleSheet();
+
 		const page = renderPage((App) => (props) =>
-			sheet.collectStyles(<App {...props} />)
+			sheet.collectStyles(
+				<StyleSheetManager stylisPlugins={[stylisRTLPlugin]}>
+					<App {...props} />
+				</StyleSheetManager>
+			)
 		);
+
 		const styleTags = sheet.getStyleElement();
+
 		return { ...page, styleTags };
 	}
-
 	render() {
 		return (
 			<Html>

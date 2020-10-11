@@ -10,13 +10,15 @@
 	},
 	"dependencies": {
 		"gray-matter": "^4.0.2",
-		"marked": "^1.2.0",
 		"netlify-cli": "^2.65.1",
 		"next": "9.5.4",
 		"react": "16.13.1",
 		"react-dom": "16.13.1",
 		"remarkable": "^2.0.1",
-		"sanitize-html": "^2.1.0",
-		"styled-components": "^5.2.0"
+		"styled-components": "^5.2.0",
+		"stylis-plugin-rtl": "^1.1.0"
+	},
+	"devDependencies": {
+		"babel-plugin-styled-components": "^1.11.1"
 	}
 }

@@ -29,7 +29,7 @@ const Post = ({ data, contents }) => {
 	return (
 		<>
 			<Head>
-				<title>{data.title}</title>
+				<title>s.grvl | {data.title}</title>
 			</Head>
 			<Article>
 				<div dangerouslySetInnerHTML={{ __html: contents }} />

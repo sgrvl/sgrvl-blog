@@ -65,26 +65,6 @@
 						/>
 					</picture>`;
 				},
-				toPreview: function (obj) {
-					return `<picture class='img-wrap'>
-						<source
-							srcset="https://res.cloudinary.com/sgrvl/w_500/${obj.image}"
-							media="(min-width: 450px)"
-						/>
-						<source
-							srcset="https://res.cloudinary.com/sgrvl/w_450/${obj.image}"
-							media="(min-width: 400px)"
-						/>
-						<source
-							srcset="https://res.cloudinary.com/sgrvl/w_400/${obj.image}"
-							media="(min-width: 350px)"
-						/>
-						<img
-							src="https://res.cloudinary.com/sgrvl/w_350/${obj.image}"
-							alt="this is alt text"
-						/>
-					</picture>`;
-				},
 			});
 		</script>
 	</body>
