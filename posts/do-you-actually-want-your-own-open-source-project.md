@@ -5,6 +5,8 @@ author: Simon Gravel
 date: "October 10, 2020"
 ---
 
+# Do you actually want your own open source project?
+
 Open source is great! It’s an amazing way to grow as a developer, influence our craft, make friends, build your online resume, and help solve your own and others’ problems.
 
 Open source is terrible! Angry issues, ambiguous PRs, pressure to maintain projects you’re not using anymore — all start to feel like the worst sort of homework.
@@ -30,6 +32,14 @@ These are some motives that are strong and sustainable and will keep things fun 
 ## This is an image
 
 <picture class='img-wrap'>
+					<source
+							srcset="https://res.cloudinary.com/sgrvl/w_600/IMG_0176.jpg"
+							media="(min-width: 550px)"
+						/>
+						<source
+							srcset="https://res.cloudinary.com/sgrvl/w_550/IMG_0176.jpg"
+							media="(min-width: 500px)"
+						/>
 					<source
 						srcset="https://res.cloudinary.com/sgrvl/w_500/IMG_0176.jpg"
 						media="(min-width: 450px)"

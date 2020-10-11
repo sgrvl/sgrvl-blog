@@ -12,7 +12,7 @@ const md = new Remarkable("full", {
 });
 
 const Article = styled.div`
-	max-width: 500px;
+	max-width: 600px;
 	margin: 0 auto;
 
 	.img-wrap {
@@ -32,7 +32,6 @@ const Post = ({ data, contents }) => {
 				<title>{data.title}</title>
 			</Head>
 			<Article>
-				<h1>{data.title}</h1>
 				<div dangerouslySetInnerHTML={{ __html: contents }} />
 			</Article>
 		</>

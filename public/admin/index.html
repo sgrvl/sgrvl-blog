@@ -40,6 +40,14 @@
 				toBlock: function (obj) {
 					return `<picture class='img-wrap'>
 						<source
+							srcset="https://res.cloudinary.com/sgrvl/w_600/${obj.image}"
+							media="(min-width: 550px)"
+						/>
+						<source
+							srcset="https://res.cloudinary.com/sgrvl/w_550/${obj.image}"
+							media="(min-width: 500px)"
+						/>
+						<source
 							srcset="https://res.cloudinary.com/sgrvl/w_500/${obj.image}"
 							media="(min-width: 450px)"
 						/>
