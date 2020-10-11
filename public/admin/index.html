@@ -38,16 +38,44 @@
 					};
 				},
 				toBlock: function (obj) {
-					// prettier-ignore
-					const url = (width) => `https://res.cloudinary.com/sgrvl/w_${width}/${obj.image}`;
-					// prettier-ignore
-					return `<div><img src=${url(500)} srcset=${`${url(450)} 450w, ${url(400)} 400w, ${url(350)} 350w, ${url(300)} 300w,`} alt=${obj.alt} /></div>`;
+					return `<picture class='img-wrap'>
+						<source
+							srcset="https://res.cloudinary.com/sgrvl/w_500/${obj.image}"
+							media="(min-width: 450px)"
+						/>
+						<source
+							srcset="https://res.cloudinary.com/sgrvl/w_450/${obj.image}"
+							media="(min-width: 400px)"
+						/>
+						<source
+							srcset="https://res.cloudinary.com/sgrvl/w_400/${obj.image}"
+							media="(min-width: 350px)"
+						/>
+						<img
+							src="https://res.cloudinary.com/sgrvl/w_350/${obj.image}"
+							alt="this is alt text"
+						/>
+					</picture>`;
 				},
 				toPreview: function (obj) {
-					// prettier-ignore
-					const url = (width) => `https://res.cloudinary.com/sgrvl/w_${width}/${obj.image}`;
-					// prettier-ignore
-					return `<div><img src=${url(500)} srcset=${`${url(450)} 450w, ${url(400)} 400w, ${url(350)} 350w, ${url(300)} 300w,`} alt=${obj.alt} /></div>`;
+					return `<picture class='img-wrap'>
+						<source
+							srcset="https://res.cloudinary.com/sgrvl/w_500/${obj.image}"
+							media="(min-width: 450px)"
+						/>
+						<source
+							srcset="https://res.cloudinary.com/sgrvl/w_450/${obj.image}"
+							media="(min-width: 400px)"
+						/>
+						<source
+							srcset="https://res.cloudinary.com/sgrvl/w_400/${obj.image}"
+							media="(min-width: 350px)"
+						/>
+						<img
+							src="https://res.cloudinary.com/sgrvl/w_350/${obj.image}"
+							alt="this is alt text"
+						/>
+					</picture>`;
 				},
 			});
 		</script>

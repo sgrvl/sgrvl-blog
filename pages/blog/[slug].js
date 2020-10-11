@@ -14,7 +14,15 @@ const md = new Remarkable("full", {
 const Article = styled.div`
 	max-width: 500px;
 	margin: 0 auto;
-	text-align: center;
+
+	.img-wrap {
+		width: 100%;
+		position: relative;
+
+		& > * {
+			width: 100%;
+		}
+	}
 `;
 
 const Post = ({ data, contents }) => {

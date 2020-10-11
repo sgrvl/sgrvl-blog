@@ -23,7 +23,6 @@ export default function Home({ slugs }) {
 				<title>Create Next App</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-
 			<h1>Hello world</h1>
 			{slugs.map((slug) => {
 				return (
