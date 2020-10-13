@@ -13,7 +13,11 @@ const md = new Remarkable("full", {
 
 const Article = styled.div`
 	max-width: 600px;
-	margin: 0 auto;
+	margin: 15vh auto 5vh auto;
+	font-family: "Ubuntu", sans-serif;
+	background: rgba(56, 58, 89, 0.3);
+	box-sizing: content-box;
+	padding: 5em;
 
 	.img-wrap {
 		width: 100%;

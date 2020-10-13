@@ -7,6 +7,7 @@ import styled from "styled-components";
 const Wrap = styled.ul`
 	max-width: 600px;
 	margin: 0 auto;
+	margin-top: 15vh;
 
 	li {
 		margin-bottom: 0.5rem;
@@ -15,7 +16,7 @@ const Wrap = styled.ul`
 	a {
 		color: ${(props) => props.theme.secondary};
 		text-decoration: none;
-		font-size: 18px;
+		color: ${(props) => props.theme.pink};
 	}
 `;
 
@@ -23,7 +24,7 @@ const Blog = ({ slugs }) => {
 	return (
 		<>
 			<Head>
-				<title>s.grvl | blog</title>
+				<title>Simon Gravel | blog</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Wrap>

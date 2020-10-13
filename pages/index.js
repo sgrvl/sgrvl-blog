@@ -2,8 +2,25 @@ import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/Layout";
 import { useEffect } from "react";
+import styled from "styled-components";
 
-export default function Home() {
+const Wrap = styled.div`
+	height: 100vh;
+	overflow: hidden;
+`;
+
+const TitleWrap = styled.div`
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	img {
+		width: 65%;
+	}
+`;
+
+const Home = () => {
 	useEffect(() => {
 		if (window.netlifyIdentity) {
 			window.netlifyIdentity.on("init", (user) => {
@@ -19,9 +36,16 @@ export default function Home() {
 	return (
 		<Layout>
 			<Head>
-				<title>simon.gravel</title>
+				<title>Simon Gravel</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
+			<Wrap>
+				<TitleWrap>
+					<img src="/simongravel.svg" alt="Simon Gravel" />
+				</TitleWrap>
+			</Wrap>
 		</Layout>
 	);
-}
+};
+
+export default Home;

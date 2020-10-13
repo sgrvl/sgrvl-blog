@@ -7,6 +7,11 @@ const GlobalStyle = createGlobalStyle`
 	body {
 		background: ${(props) => props.theme.body};
 		color: ${(props) => props.theme.text};
+		font-family: 'Press Start 2P', cursive;
+	}
+
+	h1,h2 {
+		color: ${(props) => props.theme.purple};
 	}
 `;
 
