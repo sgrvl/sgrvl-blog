@@ -11,10 +11,12 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const theme = {
-	body: "#222831",
-	text: "#ececec",
-	secondary: "#f2a365",
-	highlight: "#30475e",
+	body: "#282a36",
+	text: "#f8f8f2",
+	cyan: "#8be9fd",
+	green: "#50fa7b",
+	pink: "#ff79c6",
+	purple: "#bd93f9",
 };
 
 function MyApp({ Component, pageProps }) {

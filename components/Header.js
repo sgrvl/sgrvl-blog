@@ -31,9 +31,7 @@ const Header = () => {
 		<header>
 			<Nav>
 				<Link href="/">
-					<a>
-						<h1>sgrvl</h1>
-					</a>
+					<img src="/SG-logo.svg" alt="my logo" />
 				</Link>
 				<ul>
 					<li>
