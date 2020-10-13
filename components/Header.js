@@ -32,7 +32,7 @@ const Header = () => {
 			<Nav>
 				<Link href="/">
 					<a>
-						<h1>s.grvl</h1>
+						<h1>sgrvl</h1>
 					</a>
 				</Link>
 				<ul>
