@@ -15,8 +15,7 @@
 		"react": "16.13.1",
 		"react-dom": "16.13.1",
 		"remarkable": "^2.0.1",
-		"styled-components": "^5.2.0",
-		"stylis-plugin-rtl": "^1.1.0"
+		"styled-components": "^5.2.0"
 	},
 	"devDependencies": {
 		"babel-plugin-styled-components": "^1.11.1"

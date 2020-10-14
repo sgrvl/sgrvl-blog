@@ -9,7 +9,7 @@ const Wrap = styled.div`
 	overflow: hidden;
 `;
 
-const TitleWrap = styled.div`
+const Title = styled.div`
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -40,9 +40,9 @@ const Home = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Wrap>
-				<TitleWrap>
+				<Title>
 					<img src="/simongravel.svg" alt="Simon Gravel" />
-				</TitleWrap>
+				</Title>
 			</Wrap>
 		</Layout>
 	);
