@@ -20,6 +20,17 @@ const Title = styled.div`
 	}
 `;
 
+const Social = styled.div``;
+
+const BottomBar = styled.div`
+	position: absolute;
+	bottom: 0;
+	height: 10px;
+	width: 100%;
+	background: ${(props) =>
+		`linear-gradient(90deg, ${props.theme.cyan} 0%, ${props.theme.cyan} 20%, ${props.theme.purple} 20%, ${props.theme.purple} 40%, ${props.theme.green} 40%, ${props.theme.green} 60%, ${props.theme.pink} 60%, ${props.theme.pink} 80%, ${props.theme.text} 80%)`};
+`;
+
 const Home = () => {
 	useEffect(() => {
 		if (window.netlifyIdentity) {
@@ -44,6 +55,7 @@ const Home = () => {
 					<img src="/simongravel.svg" alt="Simon Gravel" />
 				</Title>
 			</Wrap>
+			<BottomBar />
 		</Layout>
 	);
 };
