@@ -20,6 +20,7 @@ const Nav = styled.nav`
 		padding: 0;
 		margin: 0;
 		color: ${(props) => props.theme.pink};
+		font-size: 0.75rem;
 	}
 
 	li {
@@ -29,7 +30,7 @@ const Nav = styled.nav`
 		&::before {
 			content: "";
 			position: absolute;
-			height: 2px;
+			height: 1.5px;
 			width: 0;
 			background: white;
 			bottom: -3px;
@@ -63,6 +64,11 @@ const Header = () => {
 					</a>
 				</Link>
 				<ul>
+					<li>
+						<Link href="/blog/">
+							<a>projects</a>
+						</Link>
+					</li>
 					<li>
 						<Link href="/blog/">
 							<a>blog</a>
