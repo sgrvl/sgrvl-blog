@@ -23,12 +23,28 @@ const Nav = styled.nav`
 	}
 
 	li {
+		position: relative;
 		margin-left: 2em;
+
+		&::before {
+			content: "";
+			position: absolute;
+			height: 2px;
+			width: 0;
+			background: white;
+			bottom: -3px;
+			background: ${(props) => props.theme.cyan};
+			transition: width 0.2s ease-out;
+		}
+
+		&:hover::before {
+			width: 100%;
+		}
 	}
 
 	a {
 		text-decoration: none;
-		color: inherit;
+		color: ${(props) => props.theme.pink};
 	}
 
 	img {
